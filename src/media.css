@@ -1,0 +1,83 @@
+@media (max-width: 960px) {
+  header {
+    padding: 0;
+    justify-content: space-around;
+  }
+  .logo p {
+    font-size: 34px;
+    transition: 0.2s;
+  }
+  .logoInput {
+    display: none;
+  }
+  .cartSearchBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 140px;
+  }
+  .searchInputBtn {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .openCartBtn {
+    width: 40px;
+    height: 40px;
+  }
+  .cardProduct {
+    grid-template-columns: repeat(4, minmax(110px, 231px));
+    grid-gap: 30px 30px;
+  }
+}
+@media (max-width: 750px) {
+  .logo p {
+    font-size: 30px;
+    transition: 0.2s;
+  }
+  .bestseller p {
+    font-size: 30px;
+    transition: 0.2s;
+  }
+  .cardProduct {
+    grid-template-columns: repeat(2, minmax(210px, 331px));
+    grid-gap: 30px 30px;
+  }
+  .prodPriceBtn button {
+    font-size: 2vw;
+  }
+  .prodPriceBtn p {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 492px) {
+  .searchInputBtn {
+    width: 40px;
+    height: 40px;
+  }
+  .openCartBtn {
+    width: 40px;
+    height: 40px;
+  }
+  .logo p {
+    font-size: 24px;
+    transition: 0.2s;
+  }
+  .bestseller p {
+    font-size: 24px;
+    transition: 0.2s;
+  }
+  .cardProduct {
+    grid-template-columns: repeat(2, minmax(110px, 231px));
+    grid-gap: 10px 10px;
+  }
+  .prodPriceBtn button {
+    font-size: 2vw;
+  }
+  .prodPriceBtn p {
+    font-size: 4vw;
+  }
+}
