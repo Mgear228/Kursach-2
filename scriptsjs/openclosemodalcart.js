@@ -4,7 +4,7 @@ export const openclosemodalcart = (() => {
   openCartBtn.addEventListener("click", function openCart() {
     document.getElementById("modal").classList.add("open");
   });
-  closeModalBtn.addEventListener("click", function openCart() {
+  closeModalBtn.addEventListener("click", function closeCart() {
     document.getElementById("modal").classList.remove("open");
   });
   window.addEventListener("keydown", (e) => {

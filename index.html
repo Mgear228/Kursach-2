@@ -4,17 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/media.css" />
     <title>Вайлдберрис фальшивка</title>
   </head>
   <body>
     <div class="boxWb">
       <header>
-        <div class="logo"><p>WILDBERRIES</p></div>
-        <input type="text" />
-        <button class="openCartBtn" id="openCartBtn">
-          <img class="cartImg" src="./src/img/cart.png" alt="cart" />
-          Корзина
-        </button>
+        <div class="logo"><p>FAKEBERRIES</p></div>
+        <input class="logoInput" type="text" />
+        <div class="cartSearchBtn">
+          <button class="searchInputBtn" id="searchInputBtn">
+            <img src="./src/img/searchInput.png" alt="" />
+          </button>
+          <button class="openCartBtn" id="openCartBtn">
+            <img class="cartImg" src="./src/img/cart.png" alt="cart" />
+          </button>
+        </div>
+        <div class="modalSearch" id="modalSearch">
+          <div class="modalSearchBox" id="modalSearchBox">
+            <input type="text" />
+            <button class="closeModalSearchBtn" id="closeModalSearchBtn">
+              Отмена
+            </button>
+          </div>
+        </div>
         <div class="modal" id="modal">
           <div class="modalBox" id="modalBox">
             <button class="closeModalBtn" id="closeModalBtn">X</button>

@@ -9,23 +9,34 @@
 }
 header {
   width: 100%;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   background: linear-gradient(90deg, #cb11ab, #481173);
-  padding: 30px 0;
+  padding: 20px 0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 input {
   margin: auto 0;
   width: 50%;
-  height: 80px;
+  height: 50px;
   font-size: 30px;
   padding: 0 30px;
   border: none;
   border-radius: 50px;
   background-color: rgba(240, 240, 243, 0.3);
+}
+.searchInputBtn {
+  width: 60px;
+  height: 60px;
+  background: none;
+  border-style: none;
+  display: none;
+}
+.searchInputBtn img {
+  width: 100%;
 }
 input :active {
   border: none;
@@ -36,7 +47,7 @@ input :active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 70px;
   height: 70px;
   font-size: 15px;
   color: rgb(184, 184, 184);
@@ -45,8 +56,7 @@ input :active {
   cursor: pointer;
 }
 .openCartBtn img {
-  margin-bottom: 5px;
-  width: 50%;
+  width: 90%;
 }
 .logo {
   width: 20%;
@@ -63,6 +73,7 @@ input :active {
 .cartImg {
   width: 30%;
 }
+/* Модалка корзины_____________ */
 .modal {
   position: fixed;
   left: 0;
@@ -85,13 +96,13 @@ input :active {
 }
 .modalBox {
   max-width: 500px;
+  height: 600px;
   background: white;
   padding: 30px;
   z-index: 1;
   margin: 30px 15px;
   border-radius: 10px;
   transform: scale(0);
-  transition: transform 0.8s;
   display: flex;
   flex-direction: column;
 }
@@ -107,6 +118,56 @@ input :active {
 .modal.open .modalBox {
   transform: scale(1);
 }
+/* модалка инпута____________ */
+.modalSearch {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9998;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.modalSearch.open {
+  visibility: visible;
+  opacity: 1;
+}
+.modalSearchBox {
+  padding-top: 10px;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 1;
+  border-radius: 10px;
+  transform: scale(0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.closeModalSearchBtn {
+  color: #cb11ab;
+  height: 50px;
+  width: 10%;
+  border: none;
+  background: white;
+  font-weight: 700;
+}
+.modalSearchBox input {
+  width: 80%;
+  height: 50px;
+  border: 1px solid black;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.modalSearch.open .modalSearchBox {
+  transform: scale(1);
+}
+
+/* слайдер___________ */
 .slider {
   margin: 30px auto;
   width: 90%;
@@ -115,6 +176,7 @@ input :active {
   width: 100%;
   border-radius: 20px;
 }
+/* Товар_____________ */
 .bestseller {
   width: 90%;
 }
@@ -126,11 +188,11 @@ input :active {
 .cardProduct {
   width: 100%;
   display: grid;
+  justify-content: space-between;
   grid-template-columns: repeat(5, minmax(150px, 261px));
   grid-gap: 50px 30px;
 }
 .cardProductId {
-  height: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,7 +224,7 @@ input :active {
 .cardProductId img {
   width: 80%;
 }
-
+/* Ну тут понятно_____________ */
 footer {
   width: 100%;
   height: 400px;

@@ -1,0 +1,40 @@
+@media (max-width: 960px) {
+  header {
+    padding: 5px 0;
+    justify-content: space-around;
+  }
+  .logo p {
+    font-size: 3vw;
+  }
+  .logoInput {
+    display: none;
+  }
+  .cartSearchBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20%;
+    padding: 0 10px;
+  }
+  .searchInputBtn {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin-right: 10px;
+  }
+  .openCartBtn {
+    width: 25%;
+    font-size: 10px;
+  }
+  .cardProduct {
+    grid-template-columns: repeat(4, minmax(110px, 231px));
+    grid-gap: 30px 30px;
+  }
+}
+@media (max-width: 750px) {
+  .cardProduct {
+    grid-template-columns: repeat(3, minmax(110px, 231px));
+    grid-gap: 30px 30px;
+  }
+}
