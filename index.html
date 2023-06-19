@@ -3,32 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/style.css" />
     <title>Вайлдберрис фальшивка</title>
   </head>
   <body>
-    <header>
-      <div class="logo"><h2>WILDBERRIES</h2></div>
-      <input type="text" />
-      <div class="cart">
-        <img class="cartImg" id="cartImgBtn" src="./cart.svg" alt="cart" />
-        <!-- <div class="cartModal">
-          <div class="cartModalBox">
-            <h2>Корзина</h2>
-          </div> -->
+    <div class="boxWb">
+      <header>
+        <div class="logo"><p>WILDBERRIES</p></div>
+        <input type="text" />
+        <button class="openCartBtn" id="openCartBtn">
+          <img class="cartImg" src="./src/img/cart.png" alt="cart" />
+          Корзина
+        </button>
+        <div class="modal" id="modal">
+          <div class="modalBox" id="modalBox">
+            <button class="closeModalBtn" id="closeModalBtn">X</button>
+            <h2>Корзина пуста</h2>
+            <p>
+              Чтобы найти необходимые товары, воспользуйтесь поиском или
+              каталогом.
+            </p>
+          </div>
+        </div>
+      </header>
+      <div class="slider">
+        <img
+          src="https://static-basket-01.wb.ru/vol1/crm-bnrs/bners1/big_shock_electro_sng.jpg"
+          alt=""
+        />
+      </div>
+      <div class="bestseller">
+        <p>Хиты продаж</p>
+        <div class="cardProduct">
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
+          <div class="cardProductId">
+            <img src="./src/img/testProd.jpg" alt="" />
+            <div class="prodPriceBtn">
+              <p class="prodPrice">30,99р</p>
+              <button>В корзину</button>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
-    <div class="slider">
-      <img
-        src="https://static-basket-01.wb.ru/vol1/crm-bnrs/bners1/big_shock_electro_sng.jpg"
-        alt=""
-      />
+      <footer></footer>
     </div>
-    <div class="bestseller">
-      <p>Хит продаж</p>
-    </div>
-    <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
