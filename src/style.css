@@ -34,6 +34,11 @@ input {
   border-radius: 50px;
   background-color: rgba(240, 240, 243, 0.3);
 }
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+}
 .searchInputBtn {
   width: 60px;
   height: 60px;
@@ -76,6 +81,8 @@ input :active {
 .logo p {
   color: white;
   font-size: 30px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
 }
 .cartImg {
   width: 30%;
@@ -161,9 +168,10 @@ input :active {
   border: none;
   background: white;
   font-weight: 700;
+  font-family: "Open Sans", sans-serif;
 }
 .modalSearchBox input {
-  width: 80%;
+  width: 75%;
   height: 50px;
   border: 1px solid black;
   margin: 0;
@@ -191,6 +199,7 @@ input :active {
   margin: 10px;
   font-size: 36px;
   font-weight: 600;
+  font-family: "Open Sans", sans-serif;
 }
 .cardProduct {
   width: 100%;
@@ -213,8 +222,9 @@ input :active {
 }
 .prodPriceBtn button {
   height: auto;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1vw;
+  font-family: "Open Sans", sans-serif;
   padding: 5px 11px 6px;
   border-radius: 6px;
   background-color: #cb11ab;
@@ -223,7 +233,8 @@ input :active {
   cursor: pointer;
 }
 .prodPriceBtn p {
-  font-size: 2vw;
+  font-size: 1.3vw;
+  font-family: "Open Sans", sans-serif;
 }
 .prodPriceBtn:hover {
   color: #cb11ab;
