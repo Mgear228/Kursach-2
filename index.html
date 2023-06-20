@@ -39,11 +39,8 @@
         <div class="modal" id="modal">
           <div class="modalBox" id="modalBox">
             <button class="closeModalBtn" id="closeModalBtn">X</button>
-            <h2>Корзина пуста</h2>
-            <p>
-              Чтобы найти необходимые товары, воспользуйтесь поиском или
-              каталогом.
-            </p>
+            <h2>Корзина</h2>
+            <div class="product" id="product"></div>
           </div>
         </div>
       </header>
@@ -56,18 +53,24 @@
       <div class="bestseller">
         <p>Хиты продаж</p>
         <div class="cardProduct">
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
+          <div class="cardProductId" data-id="01">
+            <img class="cardProdImg" src="./src/img/testProd.jpg" alt="" />
             <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
+              <p class="nameProduct">шампунь</p>
+              <p class="prodPrice">41,99р</p>
+              <button data-cart type="button" class="btnPushCart">
+                В корзину
+              </button>
             </div>
           </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
+          <div class="cardProductId" data-id="02">
+            <img class="cardProdImg" src="./src/img/testProd.jpg" alt="" />
             <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
+              <p class="nameProduct">мыло</p>
+              <p class="prodPrice">25,99р</p>
+              <button data-cart type="button" class="btnPushCart">
+                В корзину
+              </button>
             </div>
           </div>
           <div class="cardProductId">
