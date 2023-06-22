@@ -6,6 +6,9 @@ export const cartGeneration = window.addEventListener(
       const prodInfo = {
         id: cardPr.dataset.id,
         imgSrc: cardPr.querySelector(".cardProdImg").getAttribute("src"),
+        imgSrc: cardPr.querySelector(".cardProdImg").getAttribute("src"),
+        imgSrc: cardPr.querySelector(".cardProdImg").getAttribute("src"),
+        imgSrc: cardPr.querySelector(".cardProdImg").getAttribute("src"),
         title: cardPr.querySelector(".nameProduct").innerText,
         price: cardPr.querySelector(".prodPrice").innerText,
       };
