@@ -109,7 +109,7 @@ input :active {
   opacity: 1;
 }
 .modalBox {
-  max-width: 500px;
+  width: 600px;
   height: 600px;
   background: white;
   padding: 30px;
@@ -131,6 +131,26 @@ input :active {
 }
 .modal.open .modalBox {
   transform: scale(1);
+}
+.modalCartGeneration {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+}
+.btnCart {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  background: #cb11ab;
+  border-radius: 5px;
+}
+.btnCart p {
+  color: white;
+}
+
+.modalCartGenerationImg {
+  width: 70px;
+  height: 100px;
 }
 /* модалка инпута____________ */
 .modalSearch {
@@ -192,6 +212,15 @@ input :active {
   border-radius: 20px;
 }
 /* Товар_____________ */
+.imageURL2 {
+  display: none;
+}
+.imageURL3 {
+  display: none;
+}
+.imageURL4 {
+  display: none;
+}
 .bestseller {
   width: 90%;
 }
@@ -216,9 +245,9 @@ input :active {
 .prodPriceBtn {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 .prodPriceBtn button {
   height: auto;
@@ -236,9 +265,7 @@ input :active {
   font-size: 1.3vw;
   font-family: "Open Sans", sans-serif;
 }
-.prodPriceBtn:hover {
-  color: #cb11ab;
-}
+
 .cardProductId img {
   width: 80%;
 }
@@ -253,15 +280,4 @@ footer {
 footer p {
   margin-top: 50px;
   color: white;
-}
-
-/* Тест */
-.modalCartGeneration {
-  width: 400px;
-  display: flex;
-  flex-direction: row;
-}
-.modalCartGenerationImg {
-  width: 70px;
-  height: 100px;
 }

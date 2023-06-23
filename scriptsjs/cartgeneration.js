@@ -5,7 +5,7 @@ export const cartGeneration = window.addEventListener(
       const cardPr = event.target.closest(".cardProductId");
       const prodInfo = {
         id: cardPr.dataset.id,
-        imgSrc: cardPr.querySelector(".cardProdImg").getAttribute("src"),
+        imgSrc: cardPr.querySelector(".imageURL1").getAttribute("src"),
         title: cardPr.querySelector(".nameProduct").innerText,
         price: cardPr.querySelector(".prodPrice").innerText,
       };
@@ -16,12 +16,13 @@ export const cartGeneration = window.addEventListener(
       <div class="prodPriceBtn">
         <p class="nameProduct">${prodInfo.title}</p>
         <p class="prodPrice">${prodInfo.price}</p>
-        <button data-cart type="button" class="btnPushCart">
-          +
-        </button>
-        <button data-cart type="button" class="btnPushCart">
-          -
-        </button>
+        <div class="btnCart"><button data-cart type="button" class="btnIncrease">
+        +
+      </button><p>0</p>
+      <button data-cart type="button" class="btnDecrease">
+        -
+      </button></div>
+        
       </div>
     </div>` + cartProduct.innerHTML;
       cartProduct.innerHTML = cartItemHTML;
