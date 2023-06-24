@@ -181,17 +181,19 @@ input :active {
   overflow: hidden;
   position: relative;
 }
-
+.slider__line {
+  width: 100%;
+}
 .slider-image {
   width: 100%;
   border-radius: 15px;
-  animation: appear 0.5s forwards;
+  animation: appear 0.5s alternate;
 }
 
 @keyframes appear {
   from {
     opacity: 0.5;
-    transform: scale(0.5);
+    transform: scale(0.96);
   }
   to {
     opacity: 1;

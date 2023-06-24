@@ -52,7 +52,7 @@ function autoSlider() {
   if (!checkAutoSlider) {
     checkAutoSlider = setInterval(() => {
       nextImage();
-    }, 4000);
+    }, 3000);
   }
 }
 slider.addEventListener("mouseover", () => {
