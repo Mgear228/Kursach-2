@@ -176,13 +176,46 @@ input :active {
 
 /* слайдер___________ */
 .slider {
-  margin: 30px auto;
-  width: 90%;
+  max-width: 97%;
+  margin: 20px auto 0px;
+  overflow: hidden;
+  position: relative;
 }
-.slider img {
+.slider__line {
   width: 100%;
-  border-radius: 20px;
 }
+.slider-image {
+  width: 100%;
+  border-radius: 15px;
+  animation: appear 0.5s alternate;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0.5;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.swipeLeft {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  height: 50px;
+  border: 4px solid black;
+}
+.swipeRight {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  height: 50px;
+  border: 4px solid black;
+}
+
 /* Товар_____________ */
 .bestseller {
   width: 90%;
