@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./src/media.css" />
-    <title>Вайлдберрис фальшивка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>FAKEBERRIES</title>
   </head>
   <body>
     <div class="boxWb">
       <header>
         <div class="headerBox">
           <div class="logo"><p>FAKEBERRIES</p></div>
-          <input class="logoInput" type="text" />
+          <input class="logoInput" type="text" placeholder="Поиск..." />
           <div class="cartSearchBtn">
             <button class="searchInputBtn" id="searchInputBtn">
               <img src="./src/img/searchInput.png" alt="" />
@@ -24,7 +30,7 @@
         </div>
         <div class="modalSearch" id="modalSearch">
           <div class="modalSearchBox" id="modalSearchBox">
-            <input type="text" />
+            <input type="text" placeholder="Поиск..." />
             <button class="closeModalSearchBtn" id="closeModalSearchBtn">
               Отмена
             </button>
@@ -33,11 +39,11 @@
         <div class="modal" id="modal">
           <div class="modalBox" id="modalBox">
             <button class="closeModalBtn" id="closeModalBtn">X</button>
-            <h2>Корзина пуста</h2>
-            <p>
-              Чтобы найти необходимые товары, воспользуйтесь поиском или
-              каталогом.
-            </p>
+            <h2>Корзина</h2>
+            <div class="product" id="product"></div>
+            <div class="productItogo">
+              <p>itogo:</p>
+            </div>
           </div>
         </div>
       </header>
@@ -48,150 +54,10 @@
       </div>
       <div class="bestseller">
         <p>Хиты продаж</p>
-        <div class="cardProduct">
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-          <div class="cardProductId">
-            <img src="./src/img/testProd.jpg" alt="" />
-            <div class="prodPriceBtn">
-              <p class="prodPrice">30,99р</p>
-              <button>В корзину</button>
-            </div>
-          </div>
-        </div>
+        <div class="cardProduct" id="cardProduct"></div>
       </div>
       <footer>
+        <div></div>
         <p>Футер</p>
       </footer>
     </div>

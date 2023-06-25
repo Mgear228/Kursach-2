@@ -34,6 +34,11 @@ input {
   border-radius: 50px;
   background-color: rgba(240, 240, 243, 0.3);
 }
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+}
 .searchInputBtn {
   width: 60px;
   height: 60px;
@@ -76,6 +81,8 @@ input :active {
 .logo p {
   color: white;
   font-size: 30px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
 }
 .cartImg {
   width: 30%;
@@ -102,7 +109,7 @@ input :active {
   opacity: 1;
 }
 .modalBox {
-  max-width: 500px;
+  width: 600px;
   height: 600px;
   background: white;
   padding: 30px;
@@ -125,6 +132,39 @@ input :active {
 .modal.open .modalBox {
   transform: scale(1);
 }
+.product {
+  width: 60%;
+}
+.productItogo {
+  background-color: rgb(148, 148, 148);
+}
+.modalCartGeneration {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.btnCart {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  background: #cb11ab;
+  border-radius: 5px;
+}
+.btnCart p {
+  color: white;
+}
+
+.modalCartGenerationImg {
+  width: 70px;
+  height: 100px;
+}
+.namePriceProd {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* модалка инпута____________ */
 .modalSearch {
   position: fixed;
@@ -161,9 +201,10 @@ input :active {
   border: none;
   background: white;
   font-weight: 700;
+  font-family: "Open Sans", sans-serif;
 }
 .modalSearchBox input {
-  width: 80%;
+  width: 75%;
   height: 50px;
   border: 1px solid black;
   margin: 0;
@@ -217,6 +258,15 @@ input :active {
 }
 
 /* Товар_____________ */
+.imageURL2 {
+  display: none;
+}
+.imageURL3 {
+  display: none;
+}
+.imageURL4 {
+  display: none;
+}
 .bestseller {
   width: 90%;
 }
@@ -224,6 +274,7 @@ input :active {
   margin: 10px;
   font-size: 36px;
   font-weight: 600;
+  font-family: "Open Sans", sans-serif;
 }
 .cardProduct {
   width: 100%;
@@ -240,14 +291,15 @@ input :active {
 .prodPriceBtn {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 .prodPriceBtn button {
   height: auto;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1vw;
+  font-family: "Open Sans", sans-serif;
   padding: 5px 11px 6px;
   border-radius: 6px;
   background-color: #cb11ab;
@@ -256,11 +308,10 @@ input :active {
   cursor: pointer;
 }
 .prodPriceBtn p {
-  font-size: 2vw;
+  font-size: 1.3vw;
+  font-family: "Open Sans", sans-serif;
 }
-.prodPriceBtn:hover {
-  color: #cb11ab;
-}
+
 .cardProductId img {
   width: 80%;
 }
