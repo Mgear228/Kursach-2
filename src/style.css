@@ -132,8 +132,14 @@ input :active {
 .modal.open .modalBox {
   transform: scale(1);
 }
-.modalCartGeneration {
+.product {
   width: 60%;
+}
+.productItogo {
+  background-color: rgb(148, 148, 148);
+}
+.modalCartGeneration {
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -152,6 +158,13 @@ input :active {
   width: 70px;
   height: 100px;
 }
+.namePriceProd {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* модалка инпута____________ */
 .modalSearch {
   position: fixed;
