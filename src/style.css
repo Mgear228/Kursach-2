@@ -66,6 +66,9 @@ header {
   outline: none;
 }
 
+.searchProductList {
+  z-index: 2;
+}
 
 .searchItem {
   font-family: "Montserrat";
