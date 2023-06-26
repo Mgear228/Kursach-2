@@ -2,11 +2,13 @@
   padding: 0;
   margin: 0;
 }
+
 .boxWb {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 header {
   width: 100%;
   height: 60px;
@@ -18,27 +20,108 @@ header {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
+.logoText {
+  font-family: "Montserrat";
+  font-weight: 800;
+  width: 20%;
+}
+
 .headerBox {
   width: 90%;
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
 }
-input {
+
+.search {
+  width: 60%;
+  position: relative;
+}
+
+.searchResult {
+  width: 80%;
+  background-color: white;
+  position: absolute;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 0px 0px 0px 30px;
+  top: 50px;
+}
+
+.searchInput {
   margin: auto 0;
-  width: 50%;
+  width: 80%;
   height: 50px;
   font-size: 30px;
-  padding: 0 30px;
+  padding: 0px 0px 0px 30px;
   border: none;
-  border-radius: 50px;
+  border-radius: 15px;
   background-color: rgba(240, 240, 243, 0.3);
 }
-::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.2);
-  font-size: 24px;
-  font-family: "Open Sans", sans-serif;
+
+.searchInput:focus {
+  background-color: white;
+  outline: none;
 }
+.searchProductList {
+  z-index: 10;
+}
+
+.searchItem {
+  font-family: "Montserrat";
+  font-weight: 400;
+  border-left: 5px solid black;
+  list-style-type: none;
+  margin: 15px 0px 10px 0px;
+  font-size: 25px;
+  padding: 0px 0px 0px 10px;
+}
+
+.hl {
+  background-color: rgb(165, 13, 199);
+}
+
+/* стили для карточки поиска */
+
+.wrapper-card {
+  display: flex;
+  align-items: stretch;
+}
+.card-img {
+  margin: 10px 10px 10px -15px;
+  width: 20%;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+.card-info {
+  font-family: "Montserrat";
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-info-title {
+  font-weight: 800;
+  font-size: 30px;
+  margin: 10px 10px 0px 0px;
+}
+.card-info-price {
+  font-size: 40px;
+  font-weight: 400;
+  color: cadetblue;
+}
+
+.card-info-add {
+  width: 150px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: burlywood;
+  padding: 10px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
+}
+
 .searchInputBtn {
   width: 60px;
   height: 60px;
@@ -47,13 +130,16 @@ input {
   display: none;
   cursor: pointer;
 }
+
 .searchInputBtn img {
   width: 100%;
 }
+
 input :active {
   border: none;
   border-style: none;
 }
+
 .openCartBtn {
   display: flex;
   flex-direction: column;
@@ -67,9 +153,11 @@ input :active {
   border-style: none;
   cursor: pointer;
 }
+
 .openCartBtn img {
   width: 90%;
 }
+
 .logo {
   width: 20%;
   display: flex;
@@ -78,15 +166,18 @@ input :active {
   border-radius: 10px;
   cursor: pointer;
 }
+
 .logo p {
   color: white;
   font-size: 30px;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
 }
+
 .cartImg {
   width: 30%;
 }
+
 /* Модалка корзины_____________ */
 .modal {
   position: fixed;
@@ -104,10 +195,12 @@ input :active {
   opacity: 0;
   transition: opacity 0.4s, visibility 0.4s;
 }
+
 .modal.open {
   visibility: visible;
   opacity: 1;
 }
+
 .modalBox {
   width: 600px;
   height: 600px;
@@ -120,6 +213,7 @@ input :active {
   display: flex;
   flex-direction: column;
 }
+
 .closeModalBtn {
   position: absolute;
   top: 10px;
@@ -129,6 +223,7 @@ input :active {
   cursor: pointer;
   border-radius: 50%;
 }
+
 .modal.open .modalBox {
   transform: scale(1);
 }
@@ -177,10 +272,12 @@ input :active {
   opacity: 0;
   transition: opacity 0.4s, visibility 0.4s;
 }
+
 .modalSearch.open {
   visibility: visible;
   opacity: 1;
 }
+
 .modalSearchBox {
   padding-top: 10px;
   width: 100%;
@@ -194,6 +291,7 @@ input :active {
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .closeModalSearchBtn {
   color: #cb11ab;
   height: 50px;
@@ -203,6 +301,7 @@ input :active {
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
 }
+
 .modalSearchBox input {
   width: 75%;
   height: 50px;
@@ -211,6 +310,7 @@ input :active {
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
 }
+
 .modalSearch.open .modalSearchBox {
   transform: scale(1);
 }
@@ -270,12 +370,14 @@ input :active {
 .bestseller {
   width: 90%;
 }
+
 .bestseller p {
   margin: 10px;
   font-size: 36px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
 }
+
 .cardProduct {
   width: 100%;
   display: grid;
@@ -283,11 +385,13 @@ input :active {
   grid-template-columns: repeat(5, minmax(150px, 261px));
   grid-gap: 50px 30px;
 }
+
 .cardProductId {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .prodPriceBtn {
   width: 100%;
   display: flex;
@@ -295,6 +399,7 @@ input :active {
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .prodPriceBtn button {
   height: auto;
   font-weight: 400;
@@ -307,14 +412,20 @@ input :active {
   border: none;
   cursor: pointer;
 }
+
 .prodPriceBtn p {
   font-size: 1.3vw;
   font-family: "Open Sans", sans-serif;
 }
 
+.prodPriceBtn:hover {
+  color: #cb11ab;
+}
+
 .cardProductId img {
   width: 80%;
 }
+
 /* Ну тут понятно_____________ */
 footer {
   margin-top: 30px;
@@ -323,6 +434,7 @@ footer {
   height: 400px;
   background: #481173;
 }
+
 footer p {
   margin-top: 50px;
   color: white;

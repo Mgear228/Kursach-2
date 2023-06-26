@@ -4,3 +4,4 @@ import { htmlgenerator } from "./scriptsjs/htmlgenerator.js";
 import { cartGeneration } from "./scriptsjs/cartgeneration.js";
 import { counterproduct } from "./scriptsjs/counterproduct.js";
 import {} from "./scriptsjs/slider.js";
+import {} from "./scriptsjs/searchinput.js";
