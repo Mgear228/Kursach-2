@@ -1,3 +1,4 @@
+import { calcCart } from "./calcCart.js";
 export const counterproduct = window.addEventListener(
   "click",
   function (event) {
@@ -7,15 +8,12 @@ export const counterproduct = window.addEventListener(
       const prodPrice = modalCartGeneration.querySelector(".prodPrice");
       const itemModalCart = btnCart.querySelector(".itemModalCart");
       itemModalCart.innerText = ++itemModalCart.innerText;
-
-      // for (i = itemModalCart.innerText; i < 10; i++) {
-      //   i = i + prodPrice.innerText;
-      //   console.log(i);
-      // }
+      calcCart();
     }
     if (event.target.dataset.action === "minus") {
       const itemModalCart = btnCart.querySelector(".itemModalCart");
       itemModalCart.innerText = --itemModalCart.innerText;
+      calcCart();
       if (event.target.closest(".btnCart") && itemModalCart.innerText === "0") {
         event.target.closest(".modalCartGeneration").remove();
       }

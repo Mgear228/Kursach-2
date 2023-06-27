@@ -1,3 +1,4 @@
+import { calcCart } from "./calcCart.js";
 export const cartGeneration = window.addEventListener(
   "click",
   function (event) {
@@ -35,6 +36,7 @@ export const cartGeneration = window.addEventListener(
     </div>` + cartProduct.innerHTML;
         cartProduct.innerHTML = cartItemHTML;
       }
+      calcCart();
     }
   }
 );
