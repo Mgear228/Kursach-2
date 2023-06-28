@@ -4,10 +4,11 @@ export function calcCart() {
   cartItems.forEach(function (element) {
     const elPrice = element.querySelector(".prodPrice").innerHTML;
     const elItem = element.querySelector(".itemModalCart").innerHTML;
-    const totalPriceEl = elPrice * elItem;
+    const elementPrice = elPrice.slice(0, -2);
+    const totalPriceEl = elementPrice * elItem;
     totalPrice += totalPriceEl;
   });
   document.querySelector(
     ".productItogo p"
-  ).innerHTML = `itogo: ${totalPrice} p.`;
+  ).innerHTML = `Итого: ${totalPrice} p.`;
 }

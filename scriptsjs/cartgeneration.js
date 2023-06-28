@@ -1,9 +1,11 @@
+// import { arrayCart } from "./localstorage.js";
 import { calcCart } from "./calcCart.js";
+import { hideCartEmpty } from "./hideсartempty.js";
 export const cartGeneration = window.addEventListener(
   "click",
   function (event) {
     if (event.target.hasAttribute("data-cart")) {
-      const cartProduct = document.querySelector(".product");
+      const cartProduct = document.querySelector(".productCart");
       const cardPr = event.target.closest(".cardProductId");
       const prodInfo = {
         id: cardPr.dataset.id,
@@ -33,10 +35,19 @@ export const cartGeneration = window.addEventListener(
       </button></div>
         
       </div>
-    </div>` + cartProduct.innerHTML;
+    </div>
+  </div>` + cartProduct.innerHTML;
         cartProduct.innerHTML = cartItemHTML;
       }
+      // arrayCart.unshift({
+      //   id: prodInfo.id,
+      //   img: prodInfo.imgSrc,
+      //   text: prodInfo.title,
+      //   price: prodInfo.price,
+      // });
       calcCart();
+      hideCartEmpty();
+      // localStorage.setItem("cart", JSON.stringify(arrayCart));
     }
   }
 );
