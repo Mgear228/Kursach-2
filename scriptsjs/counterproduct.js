@@ -51,5 +51,6 @@ export const counterproduct = document.addEventListener(
         });
       }
     }
+    // localStorage.setItem("cart", JSON.stringify(arrayCart));
   }
 );
