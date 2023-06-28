@@ -216,7 +216,8 @@ input :active {
 }
 .modalBox {
   width: 600px;
-  height: 600px;
+  min-height: 300px;
+  max-height: 700px;
   background: white;
   padding: 30px;
   z-index: 1;
@@ -225,6 +226,7 @@ input :active {
   transform: scale(0);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 .closeModalBtn {
   position: absolute;
@@ -239,13 +241,38 @@ input :active {
   transform: scale(1);
 }
 .product {
-  width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productItogoBtn {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(102.42deg, #da15b8 20.69%, #8d06cc);
+  border: none;
+  border-radius: 12px;
 }
 .productItogo {
-  background-color: rgb(148, 148, 148);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+.productItogo p {
+  font-size: 20px;
+  font-weight: 500;
 }
 .modalCartGeneration {
+  margin: 10px 0;
   width: 100%;
+  height: 150px;
   display: flex;
   flex-direction: row;
 }
@@ -259,10 +286,11 @@ input :active {
 .btnCart p {
   color: white;
 }
-
 .modalCartGenerationImg {
-  width: 70px;
-  height: 100px;
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 .namePriceProd {
   width: 100%;
@@ -270,7 +298,19 @@ input :active {
   flex-direction: row;
   justify-content: space-between;
 }
-
+.nameProduct {
+  margin-right: 10px;
+}
+.prodPrice {
+  width: 87px;
+  text-align: end;
+}
+.cartText.none {
+  display: none;
+}
+.productItogo.none {
+  display: none;
+}
 /* модалка инпута____________ */
 .modalSearch {
   position: fixed;

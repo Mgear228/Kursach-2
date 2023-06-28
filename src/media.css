@@ -52,6 +52,9 @@
   .prodPriceBtn p {
     font-size: 3vw;
   }
+  .modalBox {
+    width: 400px;
+  }
 }
 @media (max-width: 492px) {
   .searchInputBtn {
@@ -79,5 +82,8 @@
   }
   .prodPriceBtn p {
     font-size: 4vw;
+  }
+  .modalBox {
+    width: 300px;
   }
 }

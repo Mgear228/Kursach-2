@@ -1,4 +1,6 @@
 import { calcCart } from "./calcCart.js";
+import { hideCartEmpty } from "./hideсartempty.js";
+// import { arrayCart } from "./localstorage.js";
 export const counterproduct = window.addEventListener(
   "click",
   function (event) {
@@ -16,7 +18,9 @@ export const counterproduct = window.addEventListener(
       calcCart();
       if (event.target.closest(".btnCart") && itemModalCart.innerText === "0") {
         event.target.closest(".modalCartGeneration").remove();
+        hideCartEmpty();
       }
     }
+    // localStorage.setItem("cart", JSON.stringify(arrayCart));
   }
 );
