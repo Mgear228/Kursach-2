@@ -1,12 +1,4 @@
-const api = "https://649455f80da866a953679814.mockapi.io/cards";
-
-// Функция-конструктор
-// function Product(name, price, imageURL1) {
-//   this.name = name;
-//   this.price = price;
-//   this.imageURL1 = imageURL1;
-// }
-// Массив объектов товаров
+const api = "https://6495c583b08e17c91792a7f7.mockapi.io/adda";
 
 fetch(api)
   .then((res) => res.json())
@@ -19,9 +11,11 @@ fetch(api)
 const items = [];
 
 const searchInput = document.querySelector("#searchInput");
-const searchResult = document.querySelector("#searchResult");
 const searchProductList = document.querySelector("#searchProductList");
 const searchItem = document.querySelector(".searchItem");
+
+const modalSearchList = document.querySelector(".modalSearchList");
+const searchInputModal = document.querySelector(".searchInputModal");
 
 function getProduct(word, arrProducts) {
   return arrProducts.filter((s) => {
@@ -33,68 +27,56 @@ function getProduct(word, arrProducts) {
 }
 
 setTimeout(() => {
-  function displayProduct() {
-    const options = getProduct(this.value, items);
+  function displayProduct(text, container) {
+    const options = getProduct(text.value, items);
+
     const html = options
       .map((product) => {
-        const regex = new RegExp(this.value, "gi");
+        const regex = new RegExp(text.value, "gi");
         const productName = product.name.replace(
           regex,
-          `<span class="hl">${this.value}</span>`
+          `<span class="hl">${text.value}</span>`
         );
         return `<li class="searchItem" id="searchItem">${productName}</li>`;
       })
       .slice(0, 7)
       .join("");
-    searchProductList.innerHTML = html;
-
-    searchProductList.addEventListener(
+    container.innerHTML = html;
+    borderRadiusInput(container);
+    container.addEventListener(
       "click",
       (element) => {
         const item = element.target.innerText;
 
         setTimeout(() => {
           items.forEach((e) => {
-            console.log(e);
             if (e.name.toUpperCase().trim() == item.toUpperCase().trim()) {
-              searchProductList.innerHTML = displayCard(e);
+              container.innerHTML = displayCard(e);
             }
           });
         });
       },
       0
     );
-
-    if (!searchInput.value) {
-      searchProductList.innerHTML = "";
-      borderRadiusInput(searchProductList);
+    if (!text.value) {
+      container.innerHTML = "";
     }
   }
 
   searchInput.addEventListener("change", () => {
-    // searchProductList.innerHTML = "";
     searchInput.value = "";
-    borderRadiusInput(searchProductList);
-    if (!searchInput) {
-      searchProductList.innerHTML = "";
-    }
   });
-  searchInput.addEventListener("keyup", displayProduct);
 
-  // функция смены у интпута радиуса нижнего бордера
-  // при открытии списка товаров
+  searchInput.addEventListener("keyup", () => {
+    displayProduct(searchInput, searchProductList);
+  });
 
-  function borderRadiusInput(list) {
-    if (list.children) {
-      searchInput.style.borderBottomLeftRadius = 0 + "px";
-      searchInput.style.borderBottomRightRadius = 0 + "px";
-    } else {
-      searchInput.style.borderBottomLeftRadius = 15 + "px";
-      searchInput.style.borderBottomRightRadius = 15 + "px";
-    }
-  }
-
-  // функция для отображения выбранной карточки
+  searchInputModal.addEventListener("change", () => {
+    modalSearchList.value = "";
+  });
+  searchInputModal.addEventListener("keyup", () => {
+    displayProduct(searchInputModal, modalSearchList);
+  });
 }, 1000);
 
 function displayCard(params) {
@@ -103,7 +85,27 @@ function displayCard(params) {
  <div class="card-info">
  <p class="card-info-title">${params.name}</p>
  <p class="card-info-price">${params.price}</p>
- <button class="card-info-add">${"Добавить в корзину"}</button>
+ <button class="card-info-add">${"В корзину"}</button>
  </div>
  </div>`;
+}
+
+document.addEventListener("click", (e) => {
+  const withinBoundaries = e.composedPath().includes(searchProductList);
+
+  if (!withinBoundaries) {
+    searchProductList.innerHTML = ""; // скрываем элемент т к клик был за его пределами
+    borderRadiusInput(searchProductList);
+  }
+});
+
+function borderRadiusInput(list) {
+  if (list.children.length !== 0 && list.children.length !== 7) {
+    searchInput.style.borderBottomLeftRadius = 0 + "px";
+    searchInput.style.borderBottomRightRadius = 0 + "px";
+  } else {
+    searchInput.style.borderBottomLeftRadius = 15 + "px";
+    searchInput.style.borderBottomRightRadius = 15 + "px";
+  }
+  console.log(list.children.length);
 }

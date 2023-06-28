@@ -46,8 +46,9 @@ header {
   position: absolute;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 30px 0px 30px;
   top: 50px;
+  z-index: 2;
 }
 
 .searchInput {
@@ -55,7 +56,7 @@ header {
   width: 80%;
   height: 50px;
   font-size: 30px;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 30px 0px 30px;
   border: none;
   border-radius: 15px;
   background-color: rgba(240, 240, 243, 0.3);
@@ -66,22 +67,22 @@ header {
   outline: none;
 }
 
-.searchProductList {
-  z-index: 2;
-}
-
 .searchItem {
   font-family: "Montserrat";
   font-weight: 400;
-  border-left: 5px solid black;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  border-bottom-left-radius: 10px;
   list-style-type: none;
   margin: 15px 0px 10px 0px;
-  font-size: 25px;
-  padding: 0px 0px 0px 10px;
+  font-size: 17px;
+  padding: 0px 10px 10px 10px;
+  width: 80%;
 }
 
 .hl {
-  background-color: rgb(165, 13, 199);
+  background-color: rgb(176, 153, 186);
+  border-radius: 5px;
 }
 
 /* стили для карточки поиска */
@@ -91,27 +92,29 @@ header {
   align-items: stretch;
 }
 .card-img {
-  margin: 10px 10px 10px -15px;
-  width: 20%;
+  margin: 10px 10px 10px 0px;
+  width: 25%;
   border: 2px solid grey;
   border-radius: 5px;
 }
 .card-info {
   font-family: "Montserrat";
-
+  margin: 0px 10px 0px 0px;
+  padding: 0px 30px 0px 0px;
   display: flex;
+  width: 50%;
   flex-direction: column;
   justify-content: space-between;
 }
 .card-info-title {
-  font-weight: 800;
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 14px;
   margin: 10px 10px 0px 0px;
 }
 .card-info-price {
-  font-size: 40px;
-  font-weight: 400;
-  color: cadetblue;
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(3, 1, 33);
 }
 
 .card-info-add {
@@ -130,6 +133,24 @@ header {
   border-style: none;
   display: none;
   cursor: pointer;
+}
+.searchInputModal {
+  padding: 0px 30px 0px 30px;
+  font-size: 30px;
+  border-radius: 20px;
+  position: relative;
+  margin: 0px 0px 0px 10px;
+}
+.searchInputModal:focus {
+  background-color: rgb(201, 195, 195);
+  outline: none;
+}
+
+.modalSearchList {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  width: 100%;
 }
 
 .searchInputBtn img {
@@ -160,12 +181,12 @@ input :active {
 }
 
 .logo {
-  width: 20%;
   display: flex;
   justify-content: start;
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
+  margin: 0px 30px 0px 0px;
 }
 
 .logo p {
@@ -289,14 +310,16 @@ input :active {
   transform: scale(0);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+  overflow-x: hidden;
 }
 
 .closeModalSearchBtn {
   color: #cb11ab;
   height: 50px;
-  width: 10%;
+  margin: 0px 15px 0px 0px;
   border: none;
   background: white;
   font-weight: 700;
@@ -307,7 +330,7 @@ input :active {
   width: 75%;
   height: 50px;
   border: 1px solid black;
-  margin: 0;
+  margin: 0px 10px 0px 10px;
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
 }
