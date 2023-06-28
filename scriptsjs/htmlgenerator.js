@@ -20,7 +20,7 @@ export const htmlgenerator = (() => {
       <img class="imageURL3" src="${element.imageURL3}" alt="" />
       <img class="imageURL4" src="${element.imageURL4}" alt="" />
       <div class="prodPriceBtn">
-      <p class="prodPrice">${element.price}</p>
+      <p class="prodPrice">${element.price} p.</p>
       <p class="nameProduct">${element.name}</p>
       <button data-cart class="btnPushCart">В корзину</button>
       </div>

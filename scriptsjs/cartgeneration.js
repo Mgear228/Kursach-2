@@ -36,6 +36,12 @@ export const cartGeneration = document.addEventListener(
         arrayCart.push(prodInfo);
         saveLocalStorage();
       }
+      // arrayCart.unshift({
+      //   id: prodInfo.id,
+      //   img: prodInfo.imgSrc,
+      //   text: prodInfo.title,
+      //   price: prodInfo.price,
+      // });
       calcCart();
       hideCartEmpty();
     }
