@@ -345,6 +345,9 @@ input :active {
 .cartText {
   margin-top: 10px;
 }
+.cartText {
+  margin-top: 10px;
+}
 .cartText.none {
   display: none;
 }
