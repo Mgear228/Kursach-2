@@ -1,13 +1,13 @@
+import art1 from "../src/img/image-slider/image1.jpg";
+import art2 from "../src/img/image-slider/image2.jpg";
+import art3 from "../src/img/image-slider/image3.jpg";
+import art4 from "../src/img/image-slider/image4.jpg";
+import art5 from "../src/img/image-slider/image5.jpg";
+
 const slider = document.querySelector("#slider");
 const sliderLine = document.querySelector("#slider-line");
 const swipeLeft = document.querySelector("#swipe-left");
 const swipeRight = document.querySelector("#swipe-right");
-
-const art1 = "./src/img/image-slider/image1.jpg";
-const art2 = "./src/img/image-slider/image2.jpg";
-const art3 = "./src/img/image-slider/image3.jpg";
-const art4 = "./src/img/image-slider/image4.jpg";
-const art5 = "./src/img/image-slider/image5.jpg";
 
 const images = [art1, art2, art3, art4, art5];
 
