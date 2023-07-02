@@ -7,7 +7,7 @@
     font-size: 34px;
     transition: 0.2s;
   }
-  .logoInput {
+  .searchInput {
     display: none;
   }
   .cartSearchBtn {
@@ -32,6 +32,13 @@
     grid-template-columns: repeat(4, minmax(110px, 231px));
     grid-gap: 30px 30px;
   }
+  .itemCart {
+    top: 4px;
+    right: -4px;
+    width: 15px;
+    height: 15px;
+    font-size: 11px;
+  }
 }
 @media (max-width: 750px) {
   .logo p {
@@ -51,6 +58,13 @@
   }
   .prodPriceBtn p {
     font-size: 3vw;
+  }
+  .modalBox {
+    width: 400px;
+  }
+  .itemCart {
+    top: 1px;
+    right: -4px;
   }
 }
 @media (max-width: 492px) {
@@ -79,5 +93,8 @@
   }
   .prodPriceBtn p {
     font-size: 4vw;
+  }
+  .modalBox {
+    width: 300px;
   }
 }

@@ -30,6 +30,7 @@ header {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 
 .search {
@@ -115,7 +116,7 @@ header {
 }
 
 .card-info-add {
- color: white;
+  color: white;
   width: 150px;
   border: 1px solid black;
   border-radius: 5px;
@@ -131,6 +132,19 @@ header {
   border-style: none;
   display: none;
   cursor: pointer;
+}
+.itemCart {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 14px;
+  background: red;
 }
 .searchInputModal {
   padding: 0px 30px 0px 30px;
@@ -215,8 +229,10 @@ input :active {
   opacity: 1;
 }
 .modalBox {
+  font-family: "Open Sans", sans-serif;
   width: 600px;
-  height: 600px;
+  min-height: 257px;
+  max-height: 700px;
   background: white;
   padding: 30px;
   z-index: 1;
@@ -225,6 +241,7 @@ input :active {
   transform: scale(0);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 .closeModalBtn {
   position: absolute;
@@ -239,30 +256,77 @@ input :active {
   transform: scale(1);
 }
 .product {
-  width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productItogoBtn {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(102.42deg, #da15b8 20.69%, #8d06cc);
+  border: none;
+  border-radius: 12px;
 }
 .productItogo {
-  background-color: rgb(148, 148, 148);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+.productItogo p {
+  margin-left: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 12px;
 }
 .modalCartGeneration {
+  margin: 10px 0;
   width: 100%;
+  height: 150px;
   display: flex;
   flex-direction: row;
 }
 .btnCart {
-  width: 80px;
+  width: 110px;
+  height: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #cb11ab;
   border-radius: 5px;
+}
+.btnCart button {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: #cb11ab;
+  border: none;
+  font-size: 20px;
+  color: white;
 }
 .btnCart p {
   color: white;
 }
+.prodPriceBtnModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .modalCartGenerationImg {
-  width: 70px;
-  height: 100px;
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 .namePriceProd {
   width: 100%;
@@ -270,7 +334,23 @@ input :active {
   flex-direction: row;
   justify-content: space-between;
 }
-
+.nameProduct {
+  margin-right: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+.prodPrice {
+  text-align: end;
+  font-family: "Open Sans", sans-serif;
+}
+.cartText {
+  margin-top: 10px;
+}
+.cartText.none {
+  display: none;
+}
+.productItogo.none {
+  display: none;
+}
 /* модалка инпута____________ */
 .modalSearch {
   position: fixed;
@@ -312,7 +392,6 @@ input :active {
 .modalSearchBox input {
   width: 75%;
   height: 50px;
-  border: 1px solid black;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
@@ -362,7 +441,84 @@ input :active {
   height: 50px;
   border: 4px solid black;
 }
-
+/* модалка товара____________ */
+.modalProduct {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 89vh;
+  z-index: 9998;
+  display: grid;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+}
+.modalProduct.open {
+  visibility: visible;
+  opacity: 1;
+}
+.cardBox {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.img1 {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  border: 5px solid rgb(255, 255, 255);
+  -webkit-box-shadow: 4px 4px 8px 14px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 14px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 14px rgba(34, 60, 80, 0.2);
+}
+.clsBtn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 300px;
+}
+/* модалка товара____________ */
+.modalProduct {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 89vh;
+  z-index: 9998;
+  display: grid;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+}
+.modalProduct.open {
+  visibility: visible;
+  opacity: 1;
+}
+.cardBox {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.img1 {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  border: 5px solid rgb(255, 255, 255);
+  -webkit-box-shadow: 4px 4px 8px 14px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 14px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 14px rgba(34, 60, 80, 0.2);
+}
+.clsBtn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 300px;
+}
 /* Товар_____________ */
 .imageURL2 {
   display: none;
@@ -377,7 +533,7 @@ input :active {
   width: 90%;
 }
 .bestseller p {
-  margin: 10px;
+  margin: 5px;
   font-size: 36px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
@@ -393,13 +549,14 @@ input :active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 .prodPriceBtn {
   width: 100%;
+  height: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
 }
 .prodPriceBtn button {
   height: auto;
@@ -414,10 +571,10 @@ input :active {
   cursor: pointer;
 }
 .prodPriceBtn p {
+  text-align: center;
   font-size: 1.3vw;
   font-family: "Open Sans", sans-serif;
 }
-
 .cardProductId img {
   width: 80%;
 }

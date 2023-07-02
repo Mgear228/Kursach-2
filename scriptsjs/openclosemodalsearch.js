@@ -7,7 +7,7 @@ export const openclosemodalsearch = (() => {
   closeModalSearchBtn.addEventListener("click", function closeSearch() {
     document.getElementById("modalSearch").classList.remove("open");
   });
-  window.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       document.getElementById("modalSearch").classList.remove("open");
     }
