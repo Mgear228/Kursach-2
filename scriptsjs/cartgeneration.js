@@ -9,7 +9,9 @@ export const cartGeneration = document.addEventListener(
     if (event.target.hasAttribute("data-cart")) {
       const cartProduct = document.querySelector(".productCart");
       const cardPr = event.target.closest(".cardProductId");
+
       const prodInfo = {
+        item: 1,
         id: cardPr.dataset.id,
         imgSrc: cardPr.querySelector(".imageURL1").getAttribute("src"),
         title: cardPr.querySelector(".nameProduct").innerText,
@@ -18,20 +20,21 @@ export const cartGeneration = document.addEventListener(
       const itemInCart = cartProduct.querySelector(
         `[data-id="${prodInfo.id}"]`
       );
-      arrayCart.push(prodInfo);
-      saveLocalStorage();
       if (itemInCart) {
         const itemModalCart = itemInCart.querySelector(".itemModalCart");
-        itemModalCart.innerHTML = ++itemModalCart.innerHTML;
+        itemModalCart.innerHTML = prodInfo.item;
       } else {
         const cartItemHTML =
           genCart(
             prodInfo.id,
             prodInfo.imgSrc,
             prodInfo.title,
-            prodInfo.price
+            prodInfo.price,
+            prodInfo.item
           ) + cartProduct.innerHTML;
         cartProduct.innerHTML = cartItemHTML;
+        arrayCart.push(prodInfo);
+        saveLocalStorage();
       }
       calcCart();
       hideCartEmpty();
