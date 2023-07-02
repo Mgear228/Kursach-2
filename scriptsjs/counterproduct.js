@@ -1,13 +1,10 @@
 import { calcCart } from "./calcCart.js";
 import { hideCartEmpty } from "./hideсartempty.js";
-// import { arrayCart } from "./localstorage.js";
 export const counterproduct = window.addEventListener(
   "click",
   function (event) {
     const btnCart = event.target.closest(".btnCart");
     if (event.target.dataset.action === "plus") {
-      const modalCartGeneration = event.target.closest(".modalCartGeneration");
-      const prodPrice = modalCartGeneration.querySelector(".prodPrice");
       const itemModalCart = btnCart.querySelector(".itemModalCart");
       itemModalCart.innerText = ++itemModalCart.innerText;
       calcCart();
@@ -21,6 +18,5 @@ export const counterproduct = window.addEventListener(
         hideCartEmpty();
       }
     }
-    // localStorage.setItem("cart", JSON.stringify(arrayCart));
   }
 );

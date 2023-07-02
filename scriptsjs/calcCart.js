@@ -8,7 +8,7 @@ export function calcCart() {
     const totalPriceEl = elementPrice * elItem;
     totalPrice += totalPriceEl;
   });
-  document.querySelector(
-    ".productItogo p"
-  ).innerHTML = `Итого: ${totalPrice} p.`;
+  document.querySelector(".productItogo p").innerHTML = `Итого: ${
+    Math.floor(totalPrice * 100) / 100
+  } p.`;
 }
