@@ -411,6 +411,7 @@ input :active {
   position: relative;
 }
 .slider__line {
+  position: relative;
   width: 100%;
 }
 .slider-image {
@@ -422,7 +423,7 @@ input :active {
 @keyframes appear {
   from {
     opacity: 0.5;
-    transform: scale(0.96);
+    transform: scale(0.99);
   }
   to {
     opacity: 1;
@@ -430,19 +431,66 @@ input :active {
   }
 }
 
-.swipeLeft {
-  position: relative;
-  z-index: 1;
-  width: 100px;
-  height: 50px;
-  border: 4px solid black;
+.slider__line__swipe__right {
+  transform: rotate(180deg);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: 30px;
+  border-radius: 50%;
+  border: none;
 }
-.swipeRight {
-  position: relative;
-  z-index: 1;
-  width: 100px;
-  height: 50px;
-  border: 4px solid black;
+
+.slider__line__swipe__right img {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.slider__line__swipe__left {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: calc(50% - 30px);
+  right: 30px;
+  border: none;
+  border-radius: 50%;
+}
+
+.slider__line__swipe__left img {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+}
+.slider-dots {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 15px;
+  left: calc(50% - 58px);
+}
+.slider-dots-item {
+  width: 10px;
+  height: 10px;
+  background-color: antiquewhite;
+  opacity: 0.5;
+  margin: 0px 10px 0px 0px;
+  border-radius: 50%;
+  text-align: center;
+}
+.slider-dots-item:hover {
+  background-color: white;
+}
+.slider-dots-item-active {
+  width: 15px;
+  height: 15px;
+  background-color: antiquewhite;
+  margin: 0px 10px 0px 0px;
+  border-radius: 50%;
+  text-align: center;
 }
 /* модалка товара____________ */
 .modalProduct {
