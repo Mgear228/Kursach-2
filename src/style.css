@@ -392,7 +392,6 @@ input :active {
 .modalSearchBox input {
   width: 75%;
   height: 50px;
-  border: 1px solid black;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
