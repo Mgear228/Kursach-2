@@ -3,7 +3,7 @@ import { calcCart } from "./calcCart.js";
 import { genCart } from "./cartgenfunc.js";
 import { hideCartEmpty } from "./hideсartempty.js";
 import { saveLocalStorage } from "./savelocalstorage.js";
-export const cartGeneration = window.addEventListener(
+export const cartGeneration = document.addEventListener(
   "click",
   function (event) {
     if (event.target.hasAttribute("data-cart")) {
@@ -33,7 +33,6 @@ export const cartGeneration = window.addEventListener(
           ) + cartProduct.innerHTML;
         cartProduct.innerHTML = cartItemHTML;
       }
-
       calcCart();
       hideCartEmpty();
     }

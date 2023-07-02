@@ -6,7 +6,7 @@ document.addEventListener("click", (e) => {
     modalProduct.classList.remove("open");
   }
 });
-window.addEventListener("keydown", (e) => {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     modalProduct.classList.remove("open");
   }
@@ -15,7 +15,6 @@ cardProduct.addEventListener("click", function (event) {
   if (event.target.dataset.action === "img") {
     const cardPr = event.target.closest(".cardProductId");
     const modalProduct = document.querySelector(".modalProduct");
-
     modalProduct.classList.add("open");
     const prodInfo = {
       imgSrc1: cardPr.querySelector(".imageURL1").getAttribute("src"),

@@ -11,7 +11,6 @@ export function genCart(id, imgSrc, title, price) {
   <button data-action="minus" type="button" class="btnDecrease">
     -
   </button></div>
-    
   </div>
 </div>
 </div>`;

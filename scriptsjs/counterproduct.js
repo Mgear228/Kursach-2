@@ -1,6 +1,6 @@
 import { calcCart } from "./calcCart.js";
 import { hideCartEmpty } from "./hideсartempty.js";
-export const counterproduct = window.addEventListener(
+export const counterproduct = document.addEventListener(
   "click",
   function (event) {
     const btnCart = event.target.closest(".btnCart");

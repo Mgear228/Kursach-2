@@ -9,7 +9,7 @@ product.addEventListener("click", function (event) {
   if (event.target.dataset.action === "save") {
     productCart.innerHTML = "";
     productItogoP.innerHTML = "Итого: 0";
-
+    document.querySelector(".itemCart").innerHTML = `0`;
     if (productCart.children.length == 0) {
       cartText.classList.remove("none");
       productItogo.classList.add("none");

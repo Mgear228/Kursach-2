@@ -7,7 +7,7 @@
     font-size: 34px;
     transition: 0.2s;
   }
-  .logoInput {
+  .searchInput {
     display: none;
   }
   .cartSearchBtn {
@@ -31,6 +31,13 @@
   .cardProduct {
     grid-template-columns: repeat(4, minmax(110px, 231px));
     grid-gap: 30px 30px;
+  }
+  .itemCart {
+    top: 6px;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    font-size: 11px;
   }
 }
 @media (max-width: 750px) {

@@ -1,7 +1,6 @@
 import { genCart } from "./cartgenfunc.js";
 import { calcCart } from "./calcCart.js";
 import { hideCartEmpty } from "./hideсartempty.js";
-import { cartGeneration } from "./cartgeneration.js";
 export let arrayCart = [];
 if (localStorage.getItem("cart")) {
   arrayCart = JSON.parse(localStorage.getItem("cart"));
