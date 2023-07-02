@@ -1,7 +1,7 @@
 export function genCart(id, imgSrc, title, price) {
   return `<div class="modalCartGeneration" data-id="${id}">
   <img class="modalCartGenerationImg" src="${imgSrc}" alt="" />
-  <div class="prodPriceBtn">
+  <div class="prodPriceBtnModal">
   <div class="namePriceProd"><p class="nameProduct">${title}</p>
   <p class="prodPrice">${price}</p>
   </div>

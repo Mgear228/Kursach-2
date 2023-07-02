@@ -229,6 +229,7 @@ input :active {
   opacity: 1;
 }
 .modalBox {
+  font-family: "Open Sans", sans-serif;
   width: 600px;
   min-height: 257px;
   max-height: 700px;
@@ -294,20 +295,34 @@ input :active {
   flex-direction: row;
 }
 .btnCart {
-  width: 80px;
+  width: 110px;
+  height: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #cb11ab;
   border-radius: 5px;
+}
+.btnCart button {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: #cb11ab;
+  border: none;
+  font-size: 20px;
+  color: white;
 }
 .btnCart p {
   color: white;
 }
+.prodPriceBtnModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .modalCartGenerationImg {
-  width: 100px;
-  height: 150px;
-  border-radius: 10px;
-  margin-right: 10px;
   width: 100px;
   height: 150px;
   border-radius: 10px;
@@ -321,9 +336,11 @@ input :active {
 }
 .nameProduct {
   margin-right: 10px;
+  font-family: "Open Sans", sans-serif;
 }
 .prodPrice {
   text-align: end;
+  font-family: "Open Sans", sans-serif;
 }
 .cartText {
   margin-top: 10px;
