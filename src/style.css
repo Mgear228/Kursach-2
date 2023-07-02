@@ -115,7 +115,7 @@ header {
 }
 
 .card-info-add {
- color: white;
+  color: white;
   width: 150px;
   border: 1px solid black;
   border-radius: 5px;
@@ -302,7 +302,6 @@ input :active {
   margin-right: 10px;
 }
 .prodPrice {
-  width: 87px;
   text-align: end;
 }
 .cartText {
@@ -458,7 +457,7 @@ input :active {
   width: 90%;
 }
 .bestseller p {
-  margin: 10px;
+  margin: 5px;
   font-size: 36px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
@@ -474,13 +473,13 @@ input :active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 .prodPriceBtn {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
 }
 .prodPriceBtn button {
   height: auto;
@@ -495,6 +494,7 @@ input :active {
   cursor: pointer;
 }
 .prodPriceBtn p {
+  text-align: center;
   font-size: 1.3vw;
   font-family: "Open Sans", sans-serif;
 }

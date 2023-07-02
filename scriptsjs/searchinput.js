@@ -107,5 +107,4 @@ function borderRadiusInput(list) {
     searchInput.style.borderBottomLeftRadius = 15 + "px";
     searchInput.style.borderBottomRightRadius = 15 + "px";
   }
-  console.log(list.children.length);
 }
