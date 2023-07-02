@@ -1,4 +1,4 @@
-export function genCart(id, imgSrc, title, price) {
+export function genCart(id, imgSrc, title, price, item) {
   return `<div class="modalCartGeneration" data-id="${id}">
   <img class="modalCartGenerationImg" src="${imgSrc}" alt="" />
   <div class="prodPriceBtnModal">
@@ -7,7 +7,7 @@ export function genCart(id, imgSrc, title, price) {
   </div>
     <div class="btnCart"><button data-action="plus" type="button" class="btnIncrease">
     +
-  </button><p class="itemModalCart">1</p>
+  </button><p class="itemModalCart">${item}</p>
   <button data-action="minus" type="button" class="btnDecrease">
     -
   </button></div>
