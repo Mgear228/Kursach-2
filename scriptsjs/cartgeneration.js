@@ -20,6 +20,8 @@ export const cartGeneration = document.addEventListener(
       const itemInCart = cartProduct.querySelector(
         `[data-id="${prodInfo.id}"]`
       );
+      arrayCart.push(prodInfo);
+      saveLocalStorage();
       if (itemInCart) {
         const itemModalCart = itemInCart.querySelector(".itemModalCart");
         itemModalCart.innerHTML = prodInfo.item;
@@ -36,12 +38,7 @@ export const cartGeneration = document.addEventListener(
         arrayCart.push(prodInfo);
         saveLocalStorage();
       }
-      // arrayCart.unshift({
-      //   id: prodInfo.id,
-      //   img: prodInfo.imgSrc,
-      //   text: prodInfo.title,
-      //   price: prodInfo.price,
-      // });
+
       calcCart();
       hideCartEmpty();
     }
