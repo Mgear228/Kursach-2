@@ -25,5 +25,4 @@ cardProduct.addEventListener("click", function (event) {
     modalProduct.innerHTML = cartItemHTML;
   }
 });
-
 export {};
