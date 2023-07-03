@@ -74,13 +74,17 @@ header {
   list-style-type: none;
   margin: 15px 0px 10px 0px;
   font-size: 17px;
-  padding: 0px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   width: 80%;
 }
 
+.searchItem:hover {
+  background-color: rgb(204, 200, 200);
+}
 .hl {
-  background-color: rgb(176, 153, 186);
-  border-radius: 5px;
+  color: rgb(175, 30, 238);
+  font-size: 18px;
+  border-radius: 10px;
 }
 
 /* стили для карточки поиска */
@@ -103,26 +107,38 @@ header {
   width: 50%;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 10px;
 }
 .card-info-title {
-  font-weight: 400;
-  font-size: 14px;
-  margin: 10px 10px 0px 0px;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 10px 10px 0px 10px;
 }
 .card-info-price {
   font-size: 20px;
   font-weight: 800;
   color: rgb(3, 1, 33);
+  margin: 10px 10px 0px 10px;
 }
 
 .card-info-add {
+  height: 38px;
   color: white;
   width: 150px;
   border: 1px solid black;
   border-radius: 5px;
+  margin: 10px 10px 10px 10px;
   background: linear-gradient(2deg, #cb11ab, #481173);
   padding: 10px 0px 10px 0px;
-  margin: 0px 0px 10px 0px;
+}
+.card-info-add:hover {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.3), 0 0 0 3px rgb(255, 255, 255);
+}
+.card-info-add:active {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.2),
+    0 0 0 2px rgba(162, 18, 220, 0.879), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  background: linear-gradient(2deg, #481173 #cb11ab);
+  font-size: 14px;
 }
 
 .searchInputBtn {
@@ -441,6 +457,10 @@ input :active {
   border-radius: 50%;
   border: none;
 }
+.slider__line__swipe__right:active {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
 
 .slider__line__swipe__right img {
   background: white;
@@ -458,6 +478,10 @@ input :active {
   border: none;
   border-radius: 50%;
 }
+.slider__line__swipe__left:active {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.2), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
 
 .slider__line__swipe__left img {
   background: white;
@@ -465,6 +489,7 @@ input :active {
   border-radius: 50%;
   padding: 5px;
 }
+
 .slider-dots {
   display: flex;
   align-items: center;
@@ -483,6 +508,7 @@ input :active {
 }
 .slider-dots-item:hover {
   background-color: white;
+  opacity: 1;
 }
 .slider-dots-item-active {
   width: 15px;

@@ -8,3 +8,4 @@ import {} from "./scriptsjs/clearCart.js";
 import {} from "./scriptsjs/slider.js";
 import {} from "./scriptsjs/searchinput.js";
 import {} from "./scriptsjs/modalproduct.js";
+import {} from "./scriptsjs/searchadd.js";

@@ -13,9 +13,9 @@ const items = [];
 const searchInput = document.querySelector("#searchInput");
 const searchProductList = document.querySelector("#searchProductList");
 const searchItem = document.querySelector(".searchItem");
-
 const modalSearchList = document.querySelector(".modalSearchList");
 const searchInputModal = document.querySelector(".searchInputModal");
+const modalSearch = document.querySelector(".modalSearchList");
 
 function getProduct(word, arrProducts) {
   return arrProducts.filter((s) => {
@@ -85,7 +85,7 @@ function displayCard(params) {
  <div class="card-info">
  <p class="card-info-title">${params.name}</p>
  <p class="card-info-price">${params.price}</p>
- <button class="card-info-add">${"В корзину"}</button>
+ <button class="card-info-add" data-card-input>${"В корзину"}</button>
  </div>
  </div>`;
 }
