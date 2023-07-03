@@ -9,7 +9,7 @@ export const cartGeneration = document.addEventListener(
     if (event.target.hasAttribute("data-cart")) {
       const cartProduct = document.querySelector(".productCart");
       const cardPr = event.target.closest(".cardProductId");
-
+      const btnPushCart = cardPr.querySelector(".btnPushCart");
       const prodInfo = {
         item: 1,
         id: cardPr.dataset.id,
@@ -21,8 +21,6 @@ export const cartGeneration = document.addEventListener(
         `[data-id="${prodInfo.id}"]`
       );
       if (itemInCart) {
-        const itemModalCart = itemInCart.querySelector(".itemModalCart");
-        itemModalCart.innerHTML = prodInfo.item;
       } else {
         const cartItemHTML =
           genCart(
