@@ -20,6 +20,8 @@ export const cartGeneration = document.addEventListener(
       const itemInCart = cartProduct.querySelector(
         `[data-id="${prodInfo.id}"]`
       );
+      arrayCart.push(prodInfo);
+      saveLocalStorage();
       if (itemInCart) {
         const itemModalCart = itemInCart.querySelector(".itemModalCart");
         itemModalCart.innerHTML = prodInfo.item;
@@ -36,6 +38,7 @@ export const cartGeneration = document.addEventListener(
         arrayCart.push(prodInfo);
         saveLocalStorage();
       }
+
       calcCart();
       hideCartEmpty();
     }
