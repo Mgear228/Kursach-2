@@ -1,11 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вайлдберрис фальшивка</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>FAKEBERRIES</title>
+  </head>
+  <body>
+    <div class="boxWb">
+      <header>
+        <div class="headerBox">
+          <div class="logo"><p class="logoText">FAKEBERRIES</p></div>
+          <div class="search">
+            <input class="searchInput" type="text" id="searchInput" />
+            <div class="searchResult" id="searchResult">
+              <ul class="searchProductList" id="searchProductList"></ul>
+            </div>
+          </div>
+          <div class="cartSearchBtn">
+            <button class="searchInputBtn" id="searchInputBtn">
+              <img src="./src/img/searchInput.png" alt="" />
+            </button>
+            <button class="openCartBtn" id="openCartBtn">
+              <img class="cartImg" src="./src/img/cart.png" alt="cart" />
+            </button>
+          </div>
+          <div class="itemCart">0</div>
+        </div>
+        <div class="modalSearch" id="modalSearch">
+          <div class="modalSearchBox" id="modalSearchBox">
+            <input
+              type="text"
+              placeholder="Поиск..."
+              class="searchInputModal"
+            />
+            <ul class="modalSearchList"></ul>
+            <button class="closeModalSearchBtn" id="closeModalSearchBtn">
+              Отмена
+            </button>
+          </div>
+        </div>
+        <div class="modal" id="modal">
+          <div class="modalBox" id="modalBox">
+            <button class="closeModalBtn" id="closeModalBtn">X</button>
+            <h2>Корзина</h2>
+            <div class="cartText">
+              <h3>Ваша корзина пуста </h3>
+              <p>Чтобы найти необходимые товары, воспользуйтесь поиском или каталогом.</p>
+            </div>
+            <div class="product" id="product">
+              <div class="productCart"></div>
+              <div class="productItogo none">
+                <p>Итого:</p>
+                <button class="productItogoBtn" data-action="save">Оплатить</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="slider" id="slider">
+        <div class="slider__line" id="slider-line"></div>
+        <div class="slider__line__swipe">
+          <button class="slider__line__swipe__right" id="swipe-right">
+            <img
+              src="./src/img/image-slider/vector-slider/vector.svg"
+              alt="#"
+            />
+          </button>
+          <button class="slider__line__swipe__left" id="swipe-left">
+            <img src="/src/img/image-slider/vector-slider/vector.svg" alt="#" />
+          </button>
+        </div>
+      </div>
+      <div id="modalProduct" class="modalProduct">
+      </div>
+      <div class="bestseller">
+        <p>Хиты продаж</p>
+        <div class="cardProduct" id="cardProduct"></div>
+      </div>
+      <footer>
+        <div class="footer-container">
+        <div>
+            <h3>Покупателям</h3>
+            <p class="footer-p">Способы оплаты</p>
+            <p class="footer-p">Возврат товара</p>
+            <p class="footer-p">Правила продажи товаров</p>
+            <p class="footer-p">Доставка</p>
+            <p class="footer-p">Возврат денежных средств</p>
+            <p class="footer-p">Правила пользования торговой площадкой</p>
+            <p class="footer-p">Политика обработки персональных данных</p>
+        </div>
+        <div class="group-one">
+        <div class=>
+            <h3>Партнерам</h3>
+            <p class="footer-p">Продавайте на Wildberries</p>
+        </div>
+        <div >
+            <h3>Компания</h3>
+            <p class="footer-p">О нас</p>
+            <p class="footer-p">Контакты</p>
+            <p class="footer-p">Вакансии</p>
+        </div>
+    </div>
+    <div class="group-two">
+        <div >
+            <h3>Мы в соцсетях</h3>
+            <p class="footer-p">Вконтакте</p>
+            <p class="footer-p">Одноклассники</p>
+            <p class="footer-p">YouTube</p>
+        </div>
+        <div >
+            <h3>Мобильные устройства</h3>
+            <p class="footer-p">App Store</p>
+            <p class="footer-p">Google Play</p>
+            <p class="footer-p">AppGallery</p>
+        </div>
+    </div>
+    </div>
+    <div class="line"></div>
+    <div class="footer-info">
+        <div class="footer-info-left"><p>ООО «ИМВБРБ», г. Минск, ул.Скрыганова 6а, помещение 8, офис 35</p>
+            <p class="footer-p">УНП 193630204 (свидетельство о государственной регистрации юридического лица выдано Минским горисполкомом от 06.06.2022 г. №0198794)
+            Дата включения сведений об интернет-магазине в Торговый реестр Республики Беларусь 01.07.2022</p>
+            <p class="footer-p">Телефон для связи: +375 17 388 60 00</p>
+            <p class="footer-p"> Режим работы: круглосуточно</p></div>
+        <div class="footer-info-right"><p>Лицо, уполномоченное продавцом рассматривать обращения покупателей о нарушении их прав, предусмотренных законодательством о защите прав потребителей – Падера Ольга Викторовна, тел. +375 17 388 60 22
+            Номера городских телефонов уполномоченных по защите прав потребителей:</p>
+            <p class="footer-p">+375 17 272 73 84 – администрация Фрунзенского района г. Минска</p>
+            <p class="footer-p">+375 17 218 00 82 – главное управление торговли и услуг Мингорисполкома</p>
+            <p class="footer-p">По оформлению рекламации или возврата, свяжитесь с нами по электронной почте: sales@wildberries.by</p></div>
+
+    </div>
+    <p class="footer-copyright">2004—2023 © Wildberries — модный интернет-магазин одежды, обуви</p>
     
-</body>
+    </footer>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
