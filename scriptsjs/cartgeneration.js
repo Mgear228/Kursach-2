@@ -20,6 +20,7 @@ export const cartGeneration = document.addEventListener(
         `[data-id="${prodInfo.id}"]`
       );
       if (itemInCart) {
+        alert("Товар уже добавлен в корзину");
       } else {
         const cartItemHTML =
           genCart(
