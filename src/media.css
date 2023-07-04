@@ -138,3 +138,13 @@
     width: 35%;
   }
 }
+@media(min-width: 320px) and (max-width:640px){
+  .footer-info{display: flex;
+  flex-direction: column;}}
+
+@media(min-width: 320px) and (max-width:640px){
+.group-one{
+  display: flex;
+  flex-direction: column;
+}
+}
